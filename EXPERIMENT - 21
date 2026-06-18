@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char msg[100];
+    int block = 8;
+
+    printf("Enter message: ");
+    scanf("%s", msg);
+
+    int len = strlen(msg);
+    int pad = block - (len % block);
+
+    if(pad == block)
+        pad = block;
+
+    printf("Padding required = %d bytes\n", pad);
+
+    for(int i=0;i<pad;i++)
+        strcat(msg,"0");
+
+    printf("Padded Message = %s\n", msg);
+
+    return 0;
+}
