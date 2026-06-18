@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+int modInverse(int a)
+{
+    for(int i=1;i<26;i++)
+        if((a*i)%26==1)
+            return i;
+    return -1;
+}
+
+int main()
+{
+    int key[2][2]={{9,4},{5,7}};
+    char pt[]="MEETME";
+
+    printf("Cipher Text: ");
+
+    for(int i=0;i<strlen(pt);i+=2)
+    {
+        int p1=pt[i]-'A';
+        int p2=pt[i+1]-'A';
+
+        int c1=(9*p1+4*p2)%26;
+        int c2=(5*p1+7*p2)%26;
+
+        printf("%c%c",c1+'A',c2+'A');
+    }
+
+    printf("\n");
+}
