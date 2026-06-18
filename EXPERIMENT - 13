@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int P[2][2] = {{7,4},{11,11}}; // Example plaintext matrix
+    int C[2][2] = {{3,8},{20,15}}; // Corresponding ciphertext
+
+    printf("Known Plaintext Attack on Hill Cipher\n");
+    printf("Using P and C matrices, compute:\n");
+    printf("K = C * P^-1 (mod 26)\n");
+    printf("Key matrix can be recovered if P is invertible.\n");
+
+    return 0;
+}
