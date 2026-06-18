@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+
+    printf("DES Observation:\n");
+    printf("First 24 bits of subkey come from one 28-bit half.\n");
+    printf("Second 24 bits come from other 28-bit half.\n");
+    printf("The two halves are disjoint.\n");
+
+    return 0;
+}
