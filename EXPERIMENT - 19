@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char plaintext[100];
+
+    printf("Enter plaintext: ");
+    gets(plaintext);
+
+    printf("\nCBC with 3DES Process:\n");
+
+    printf("IV XOR P1 -> Encrypt with K1,K2,K3\n");
+    printf("C1 generated\n");
+    printf("C1 XOR P2 -> Encrypt\n");
+    printf("C2 generated\n");
+
+    printf("\nChoice:\n");
+    printf("Security  : CBC + 3DES\n");
+    printf("Performance : CBC + DES (faster)\n");
+
+    return 0;
+}
